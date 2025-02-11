@@ -28,7 +28,7 @@ Key-Value Stores make digital data management:
 This simple but powerful approach makes Key-Value Stores a fundamental tool in modern data management.
 
 # Key Features
-<img src="Key_Value_Store_Architecture.png" alt="Alt Text" width="400" />
+<img src="images/Key_Value_Store_Architecture.png" alt="Alt Text" width="400" />
 
 - **Client**: Sends requests to the primary server.  
 - **Primary Server**: Manages data, handles write operations, updates replicas via WebSockets.  
