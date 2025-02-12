@@ -104,6 +104,7 @@ Step 5: Now, its time to run the Project ( using Git Bash)
 ```
 ## Output: 
 ![Alt Text](images/server_run.png)
+
 ***Start the replica servers (replica.js):***
 ```bash
 PORT=5001 node replica.js &
