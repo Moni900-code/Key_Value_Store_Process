@@ -75,7 +75,7 @@ npm -v
 Step 3: Navigate to Your Node.js Project Folder:
 
 ```bash
-cd G:/Poridhi/SE_task/task1_key_value_store
+cd key_value_store
 ```
 **Adjust the command according to your folder path**
 
@@ -103,7 +103,7 @@ Step 5: Now, its time to run the Project ( using Git Bash)
  npm start
 ```
 ## Output: 
-![Alt Text](images/server_run.png)
+![Alt Text](images/npm.png)
 
 ***Start the replica servers (replica.js):***
 ```bash
@@ -111,8 +111,8 @@ PORT=5001 node replica.js &
 PORT=5002 node replica.js &
 ```
 ## Output: 
-![Alt Text](images/replica1run.png)
-![Alt Text](images/replica2run.png)
+![Alt Text](images/rp1.png)
+![Alt Text](images/rp2.png)
 ## Note: port are deifined at server.js file
 
 # NOW,
@@ -135,7 +135,7 @@ This command sends a POST request to a local server with JSON data:
 
 
 ## Output: 
-![Alt Text](images/curl_KV.png)
+![Alt Text](images/post.png)
 
 ## **GET**: Read key value pair: 
 ```bash
@@ -144,7 +144,7 @@ curl -X GET http://localhost:5000/get/name
 
 ```
 ## Output: 
-![Alt Text](images/data_retrive.png)
+![Alt Text](images/get.png)
 
  ## **PUT**: Update existing key by updating the value and version number: 
 ```bash
@@ -152,14 +152,14 @@ curl -X POST http://localhost:5000/set -H "Content-Type: application/json" -d '{
 
 ```
 ## Output: 
-![Alt Text](images/update.png)
+![Alt Text](images/put.png)
 
 ## **DELETE:** Delete existing key: 
 ```bash
 curl -X DELETE http://localhost:5000/delete/name
 ```
 ## Output: 
-![Alt Text](images/delete.png)
+![Alt Text](images/del.png)
 
 
 Step 7:  Now, how to Perform a Failover Check (Primary Server Failure Test)
@@ -171,6 +171,6 @@ You will test what happens when the Primary Server (5000) fails.
    node failover.js
 ```
 ## Output: 
-![Alt Text](images/failover_check.png)
+![Alt Text](images/p_fail.png)
 
 Due to the failure of the primary server, the replica will take over as the primary server and perform tasks similar to the original primary server. This failover system will be checked continuously to ensure smooth operation. This way, we can complete the key-value store project.
